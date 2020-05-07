@@ -3,21 +3,23 @@
 namespace src\controllers;
 
 use \core\Controller;
-use \src\models\User;
+use \src\helpers\AuthHelper;
 
 class HomeController extends Controller
 {
     private $loggedUser;
 
-    public function __constructor()
+    public function __construct()
     {
-        # code...
+        $this->loggedUser = AuthHelper::checkLogin();
+
+        if ($this->loggedUser === false) {
+            $this->redirect('/login');
+        }
     }
 
     public function index()
     {
-        $users = User::select()->execute();
-
-        $this->render('home', ['users' => $users]);
+        $this->render('home');
     }
 }
