@@ -1,8 +1,10 @@
 <?php
+
 use core\Router;
 
 $router = new Router();
 
 $router->get('/', 'HomeController@index');
-$router->get('/about', 'HomeController@about');
-$router->get('/user/{id}', 'HomeController@edit');
+
+$router->get('/login', 'AuthController@login');
+$router->get('/register', 'AuthController@register');
