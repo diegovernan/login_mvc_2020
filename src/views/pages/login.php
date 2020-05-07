@@ -3,7 +3,7 @@
 <div class="container vh-100 d-flex align-items-center col justify-content-center">
     <div class="card">
         <div class="card-header">
-            <h5 class="text-center">Login</h5>
+            <h5 class="text-center">Logar-se</h5>
         </div>
 
         <div class="card-body">
@@ -23,8 +23,9 @@
                     <label class="form-check-label" for="check">Lembra de mim</label>
                 </div>
 
-                <div class="text-center">
+                <div>
                     <button type="submit" class="btn btn-primary">Entrar</button>
+                    <span><a href="<?= $base ?>/register">Não possuí cadastro?</a></span>
                 </div>
             </form>
         </div>
