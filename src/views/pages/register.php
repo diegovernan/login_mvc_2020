@@ -7,7 +7,6 @@
         </div>
 
         <div class="card-body">
-
             <?php if (!empty($msg)) : ?>
                 <div class="alert alert-danger alert-dismissible fade show">
                     <?= $msg; ?>

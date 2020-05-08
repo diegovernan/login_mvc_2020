@@ -7,7 +7,16 @@
         </div>
 
         <div class="card-body">
-            <form method="" action="">
+            <?php if (!empty($msg)) : ?>
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <?= $msg; ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
+
+            <form method="post" action="<?= $base ?>/login">
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input type="email" class="form-control" id="email" name="email">

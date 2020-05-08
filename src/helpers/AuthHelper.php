@@ -26,6 +26,23 @@ class AuthHelper
         return false;
     }
 
+    public function userVerify($email, $password)
+    {
+        $data = User::select()->where('email', $email)->first();
+
+        if (count($data) > 0) {
+            if (password_verify($password, $data['password'])) {
+                $token = md5(time() . rand());
+
+                User::update()->set('token', $token)->where('email', $email)->execute();
+
+                return $token;
+            }
+        }
+
+        return false;
+    }
+
     public function emailExists($email)
     {
         $data = User::select()->where('email', $email)->execute();
