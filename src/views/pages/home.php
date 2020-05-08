@@ -1,5 +1,8 @@
 <?php $render('header'); ?>
+<?php $render('navbar'); ?>
 
-<h1>Home</h1>
+<div class="container">
+    <h1>Home</h1>
+</div>
 
 <?php $render('footer'); ?>

@@ -45,6 +45,13 @@ class AuthController extends Controller
         }
     }
 
+    public function logout()
+    {
+        $_SESSION['token'] = '';
+        
+        $this->redirect('/login');
+    }
+
     public function register()
     {
         $msg = '';
