@@ -25,7 +25,7 @@
 
                 <div>
                     <button type="submit" class="btn btn-primary">Entrar</button>
-                    <span><a href="<?= $base ?>/register">Não possuí cadastro?</a></span>
+                    <span><a href="<?= $base ?>/register">Não possui cadastro?</a></span>
                 </div>
             </form>
         </div>

@@ -25,4 +25,22 @@ class AuthHelper
 
         return false;
     }
+
+    public function emailExists($email)
+    {
+        $data = User::select()->where('email', $email)->execute();
+
+        return $data ? true : false;
+    }
+
+    public function addUser($name, $email, $password)
+    {
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        $token = md5(time() . rand());
+
+        User::insert(['name' => $name, 'email' => $email, 'password' => $password, 'token' => $token])->execute();
+
+        return $token;
+    }
 }

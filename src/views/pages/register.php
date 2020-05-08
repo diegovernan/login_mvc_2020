@@ -7,7 +7,17 @@
         </div>
 
         <div class="card-body">
-            <form method="" action="">
+
+            <?php if (!empty($msg)) : ?>
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <?= $msg; ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
+
+            <form method="post" action="<?= $base ?>/register">
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input type="text" class="form-control" id="name" name="name">
@@ -30,7 +40,7 @@
 
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">Entrar</button>
-                    <span><a href="<?= $base ?>/login">Já possuí cadastro?</a></span>
+                    <span><a href="<?= $base ?>/login">Já possui cadastro?</a></span>
                 </div>
             </form>
         </div>
