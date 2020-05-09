@@ -24,4 +24,6 @@ Acessar `localhost/login-mvc-2020/public`
 
 > Documentação da Query Builder [aqui](https://github.com/ClanCats/Hydrahon)
 
-> Exemplo de CRUD utilizando a estrutura [MVC - 2020](https://github.com/diegovernan/crud_mvc_2020)# 
+> Exemplo de CRUD utilizando a estrutura [MVC - 2020](https://github.com/diegovernan/crud_mvc_2020)
+
+> MVC 2020 sem sistema de login [aqui](https://github.com/diegovernan/mvc_2020)
